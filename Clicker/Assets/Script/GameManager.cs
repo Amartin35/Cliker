@@ -9,11 +9,14 @@ public class GameManager : MonoBehaviour
 
     public float TotalClicks;
 
+    public int ClickPower;
+
     public static GameManager instance;
 
 
     public void Awake()
     {
+        ClickPower += 1;
         if(instance == null)
         {
             instance = this;
@@ -25,7 +28,8 @@ public class GameManager : MonoBehaviour
     }
     public void AddClicks()
     {
-        TotalClicks++;
+        print("clique");
+        TotalClicks += ClickPower;
         ClicksTotalText.text = TotalClicks.ToString("0");
     }
 

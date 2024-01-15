@@ -5,9 +5,9 @@ using TMPro;
 
 public class ClickUpgrade : MonoBehaviour
 {
-    public int powerClick;
+    
     public float minimumClicksToUnlockUp;
-    S
+    
     private GameManager gameManager;
 
     public TextMeshProUGUI priceText, amountText;
@@ -16,7 +16,9 @@ public class ClickUpgrade : MonoBehaviour
 
     void Start()
     {
+
         gameManager = GameManager.instance;
+        
         UpdateText();
     }
 
@@ -26,7 +28,8 @@ public class ClickUpgrade : MonoBehaviour
         {
             gameManager.TotalClicks -= minimumClicksToUnlockUp;
 
-            powerClick++;
+            
+            gameManager.ClickPower++;
             minimumClicksToUnlockUp *= 1.35f;
 
             UpdateText();
@@ -36,6 +39,6 @@ public class ClickUpgrade : MonoBehaviour
     private void UpdateText()
     {
         priceText.text = "Need" + Mathf.Round(minimumClicksToUnlockUp).ToString() + "Golds";
-        amountText.text = "+" + (powerClick + 1).ToString() + "dmg";
+        amountText.text = "+" + (gameManager.ClickPower + 1).ToString() + "dmg";
     }
 }
