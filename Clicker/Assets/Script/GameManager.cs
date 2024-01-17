@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
 
+
+
     public void Awake()
     {
         ClickPower += 1;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
         print("clique");
         TotalClicks += ClickPower;
         ClicksTotalText.text = TotalClicks.ToString("0");
+
     }
 
 }
