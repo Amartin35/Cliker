@@ -123,6 +123,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &116344423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116344425}
+  - component: {fileID: 116344424}
+  m_Layer: 0
+  m_Name: SpawnSlime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &116344424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116344423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39722747bb3868047a2f8037ff67d052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slimeDataList:
+  - {fileID: 11400000, guid: 4ba52dbf668f9d04aa90d966d8010907, type: 2}
+  - {fileID: 11400000, guid: 4dc86fbbd8c9d004fb3e8e510796721a, type: 2}
+  - {fileID: 11400000, guid: 067d211908ca233478a9bdf6285c5fee, type: 2}
+--- !u!4 &116344425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116344423}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.12, y: -0.26, z: -0.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &165754050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,3 +2551,4 @@ SceneRoots:
   - {fileID: 1005134529}
   - {fileID: 1690630566}
   - {fileID: 521569533}
+  - {fileID: 116344425}

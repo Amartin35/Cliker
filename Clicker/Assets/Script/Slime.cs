@@ -14,5 +14,8 @@ public class Slime : ScriptableObject
 
     public Mesh slimeSprite;
 
+    public GameObject slimePrefab;
+    
+    public Vector3 spawnPosition;
 
 }

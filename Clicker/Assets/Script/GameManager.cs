@@ -33,5 +33,4 @@ public class GameManager : MonoBehaviour
         ClicksTotalText.text = TotalClicks.ToString("0");
     }
 
-
 }
