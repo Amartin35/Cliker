@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI ClicksTotalText;
 
+    public SlimeInGame slime;
+
+    public float health;
+
     public float TotalClicks;
 
     public int ClickPower;
@@ -18,8 +22,11 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
+       
+        
+
         ClickPower += 1;
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -28,12 +35,22 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Update()
+    {
+        if(slime == null)
+        {
+            slime = FindObjectOfType<SlimeInGame>();
+        }
+        health = slime.hp;
+    }
     public void AddClicks()
     {
         print("clique");
         TotalClicks += ClickPower;
         ClicksTotalText.text = TotalClicks.ToString("0");
-
+        health -= ClickPower;
+        slime.hp = health;
     }
 
 }

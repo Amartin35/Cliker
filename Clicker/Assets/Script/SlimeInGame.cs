@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class SlimeInGame : MonoBehaviour
 {
-    public int hp;
+    public float hp;
 }

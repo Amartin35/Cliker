@@ -8,7 +8,13 @@ public class AutoClickUpgrade : MonoBehaviour
     public int autoClicksPerSecond;
     public int minimumClicksToUnlockUp;
 
+    public SlimeInGame slime;
+
+    public float health;
+
     private GameManager gameManager;
+
+    public int ClickPower;
 
     public TextMeshProUGUI priceText, amountText;
 
@@ -34,11 +40,22 @@ public class AutoClickUpgrade : MonoBehaviour
 
     private void Update()
     {
+        if (slime == null)
+        {
+            slime = FindObjectOfType<SlimeInGame>();
+        }
+        health = slime.hp;
+        ClickPower = gameManager.ClickPower;
+
+
         if (autoClicksPerSecond > 0)
         {
             gameManager.TotalClicks += autoClicksPerSecond * Time.deltaTime;
 
             gameManager.ClicksTotalText.text = gameManager.TotalClicks.ToString("0");
+            health -= ClickPower * Time.deltaTime;
+            slime.hp = health;
+
         }
     }
 

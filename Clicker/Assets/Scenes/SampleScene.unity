@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slimeDataList:
-  - {fileID: 919132149155446097, guid: adf6a0c8e96163a4eb2d395fca85af64, type: 3}
-  - {fileID: 919132149155446097, guid: 30e1db6d33c325248947eeda4945948c, type: 3}
-  - {fileID: 919132149155446097, guid: e69e2ceb1d00a60498d7522f5bf4527d, type: 3}
-  slimeActuelle: {fileID: 0}
+  - {fileID: 2297683313334030219, guid: 328c47951db266f4f8d825838cf4e20b, type: 3}
+  - {fileID: 6675818528500296475, guid: 37e6af073c8abd642b6d55738707e2df, type: 3}
+  - {fileID: -8771622648538819737, guid: 1d3e40c2dd0d4244896538aa0907093c, type: 3}
+  slime: {fileID: 0}
   pivot: {fileID: 1740116007}
 --- !u!4 &116344425
 Transform:
@@ -167,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 116344423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: -0.26, z: -0.08}
+  m_LocalPosition: {x: -0.12, y: 0, z: -0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1178,6 +1178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoClicksPerSecond: 0
   minimumClicksToUnlockUp: 10
+  slime: {fileID: 0}
+  health: 0
+  ClickPower: 0
   priceText: {fileID: 418710465}
   amountText: {fileID: 1680421102}
 --- !u!1 &736153305
@@ -1215,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -159}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &908146325
@@ -1655,6 +1658,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClicksTotalText: {fileID: 531280117}
+  slime: {fileID: 0}
+  health: 0
   TotalClicks: 0
   ClickPower: 0
 --- !u!4 &1649352018
@@ -2034,7 +2039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740116007}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2200,6 +2205,7 @@ GameObject:
   - component: {fileID: 1865445826}
   - component: {fileID: 1865445828}
   - component: {fileID: 1865445827}
+  - component: {fileID: 1865445829}
   m_Layer: 5
   m_Name: Green
   m_TagString: Untagged
@@ -2246,11 +2252,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 462bd8c6efc86314ebd472e7fee5cb39, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -2264,6 +2270,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865445825}
   m_CullTransparentMesh: 1
+--- !u!114 &1865445829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865445825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e3aec181c3da34ab8c834f39a7472a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slime: {fileID: 0}
+  healtBar: {fileID: 1865445827}
+  healtAmount: 100
 --- !u!1 &1931326659
 GameObject:
   m_ObjectHideFlags: 0

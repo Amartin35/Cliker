@@ -27,6 +27,8 @@ public class SpawnSlimes : MonoBehaviour
     {
         if(slime.hp <= 0) 
         {
+
+            Destroy(slime.gameObject);
             Spawn_Slime();
         }
     }
