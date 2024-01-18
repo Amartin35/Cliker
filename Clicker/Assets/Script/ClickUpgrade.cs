@@ -12,16 +12,14 @@ public class ClickUpgrade : MonoBehaviour
 
     public TextMeshProUGUI priceText, amountText;
 
-
-
     void Start()
     {
-
         gameManager = GameManager.instance;
-        
+   
         UpdateText();
     }
 
+    // FONCTION ACHAT DE L AMELIORATION INFINI DE LA PUISSANCE DU CLICK
     public void BuyUpgrade()
     {
         if (gameManager.TotalClicks >= minimumClicksToUnlockUp)
@@ -36,6 +34,7 @@ public class ClickUpgrade : MonoBehaviour
         }
     }
 
+    // UPDATE LE TEXTE
     private void UpdateText()
     {
         priceText.text = "Need" + Mathf.Round(minimumClicksToUnlockUp).ToString() + "Golds";

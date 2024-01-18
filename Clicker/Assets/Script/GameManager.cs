@@ -17,14 +17,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-
-
-
     public void Awake()
     {
-       
-        
-
         ClickPower += 1;
         if (instance == null)
         {
@@ -44,6 +38,8 @@ public class GameManager : MonoBehaviour
         }
         health = slime.hp;
     }
+
+    // FONCTION QUI AJOUTE LES CLICKS
     public void AddClicks()
     {
         print("clique");
@@ -52,5 +48,4 @@ public class GameManager : MonoBehaviour
         health -= ClickPower;
         slime.hp = health;
     }
-
 }

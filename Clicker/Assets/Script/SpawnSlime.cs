@@ -5,15 +5,17 @@ using UnityEngine;
 public class SpawnSlimes : MonoBehaviour
 {
     public List<SlimeInGame> slimeDataList;
-    public SlimeInGame slime;
-    public Transform pivot;
 
+    public SlimeInGame slime;
+
+    public Transform pivot;
 
     private void Start()
     {
         Spawn_Slime();
     }
     
+    // FAIS SPAWN UN SLIME DE MANIERE RANDOM PARMIS LA LISTE
     public void Spawn_Slime()
     {
         SlimeInGame slimeToSpawn = slimeDataList[Random.Range(0, slimeDataList.Count)];
@@ -23,15 +25,13 @@ public class SpawnSlimes : MonoBehaviour
         slime.transform.eulerAngles = Vector3.up * -55;
     }
 
+    // CHANGE DE SLIME SI SLIME MEURT
     private void Update()
     {
         if(slime.hp <= 0) 
         {
-
             Destroy(slime.gameObject);
             Spawn_Slime();
         }
     }
 }
-
-

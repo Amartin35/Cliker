@@ -6,6 +6,7 @@ using TMPro;
 public class AutoClickUpgrade : MonoBehaviour
 {
     public int autoClicksPerSecond;
+
     public int minimumClicksToUnlockUp;
 
     public SlimeInGame slime;
@@ -25,6 +26,7 @@ public class AutoClickUpgrade : MonoBehaviour
         UpdateText();
     }
 
+    // FONCTION ACHAT DE L AMELIORATION INFINI DE L AUTOCLICK
     public void BuyUpgrade()
     {
         if (gameManager.TotalClicks >= minimumClicksToUnlockUp)
@@ -59,6 +61,7 @@ public class AutoClickUpgrade : MonoBehaviour
         }
     }
 
+    // UPDATE LE TEXTE
     private void UpdateText()
     {
         priceText.text = "Need" + minimumClicksToUnlockUp.ToString() + "Golds";
